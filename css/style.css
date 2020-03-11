@@ -1,0 +1,74 @@
+/*
+////////////////////////////
+////////CSS PAGE.///////////
+////////////////////////////
+*/
+
+/* TOTAL PAGE */
+*{
+    /*margen*/
+    margin: 0px;
+    /*relleno*/
+    padding: 0px;
+}
+
+/* THE BODY PART */
+body{
+    /*color de fondo*/
+    background-color: #FAFAFA;
+}
+
+/* THE WRAPPER PART */
+#wrapper{
+    /*anchura*/
+    width: 70%;
+    /*altura*/
+    height: 80%;
+    /*desbordarse: oculto*/
+    overflow: hidden; 
+    /*margen*/
+    margin: 50px auto;
+    /*relleno*/
+    padding: 10px;
+}
+
+    /* THE LEFT PART WRAPPER */
+    .w-left{
+        /*anchura*/
+        width: 50%;
+        /*flotante: izquierda*/
+        float: left;
+        /*alineación del texto: derecha*/
+        text-align: right;
+    }
+    
+    /* THE RIGHT PART WRAPPER */
+    .w-right{
+        /*anchura*/
+        width: 50%;
+        /*flotante: derecha*/
+        float: right;
+    }
+    
+        /* LOGO AND FORM */
+        .main-content{
+            /*anchura*/
+            width: 250px;
+            /*margen*/
+            margin: 10px auto;
+            /*color de fondo*/
+            background-color: #fff;
+            /*borde*/
+            border: 1px solid #e6e6e6;
+            /*relleno*/
+            padding: 40px 50px;
+        }
+
+
+
+
+/* 
+    Created on : 09-mar-2020, 10:40:28
+    Author     : tarek
+*/
+
