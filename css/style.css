@@ -63,7 +63,91 @@ body{
             /*relleno*/
             padding: 40px 50px;
         }
-
+        
+            /* LOGO */
+            .header{
+                /*borde*/
+                border: 0px solid #000;
+                /*margen inferior*/
+                margin-bottom: 5px;
+            }
+            
+                /* LOGO OF IMAGEN */
+                .header img {
+                    /*altura*/
+                    height: 50px;
+                    /*anchura*/
+                    width: 175px;
+                    /*margen automatico*/
+                    margin: auto;
+                    /*posición relativa*/
+                    position: relative;
+                    /*derecha*/
+                    left: 40px;
+                }
+                
+            /* INPUTS OF TEXT AND PASSWORD */
+            .input{
+                /*anchura*/
+                width: 100%;
+                /*margen inferior*/
+                margin-bottom: 5px;
+                /*relleno*/
+                padding: 8px 12px;
+                /*bordes*/
+                border: 1px solid #dbdbdb;
+                /*tamaño de la caja: cajaj con bordes*/
+                box-sizing: border-box;
+                /*tamaño de los bordes*/
+                border-radius: 3px;
+            }  
+            
+                /*TEXT*/
+                .overlap-text{
+                    /*posición: relativo*/
+                    position: relative;
+                }
+                
+                .overlap-text a{
+                    /*posición: absoluto*/
+                    position: absolute;
+                    /*arriba*/
+                    top: 8px;
+                    /*derecha*/
+                    right: 10px;
+                    /*color*/
+                    color: #003569;
+                    /*tamaño de la letra*/
+                    font-size: 14px;
+                    /*decoración del texto*/
+                    text-decoration: none;
+                    /*tipo de letra*/
+                    font-family: 'Segoe UI', monospace;
+                    /*peso de letra*/
+                    font-weight: 400;
+                }
+                
+            /*BUTON*/
+            .btn{
+                /*anchura*/
+                width: 100%;
+                /*color de fondo*/
+                background-color: #3897f0;
+                /*bordes*/
+                border: 1px solid #3897f0;
+                /*relleno*/
+                padding: 5px 12px;
+                /*color*/
+                color: #fff;
+                /*peso de la letra*/
+                font-weight: bold;
+                /*cursor: puntero*/
+                cursor: pointer;
+                /*tamaño de los bordes*/
+                border-radius: 3px;
+                
+            }
+        
 
 
 

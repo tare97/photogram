@@ -32,10 +32,13 @@
                         <form action="" method="post">
                             <!--User-->
                             <input type="text" placeholder="Usuario" class="input" name="usuario" />
-                            <!--Password-->
-                            <input type="password" placeholder="Contraseña" class="input" name="password" />
-                            <!--(olvidar == forget) password or user name-->
-                            <a href="#">Olvidastes?</a>
+                            <!--(overlap = superposición) text-->
+                            <div class="overlap-text">
+                                <!--Password-->
+                                <input type="password" placeholder="Contraseña" class="input" name="password" />
+                                <!--(olvidar == forget) password or user name-->
+                                <a href="#">Olvidastes?</a>
+                            </div>
                             <!--Button for login-->
                             <input type="submit" value="Entrar" class="btn" name="entrar" />
                         </form>
