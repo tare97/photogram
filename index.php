@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <!--Project of Tarek, Photogram.-->
+<!--Login Home page-->
+<?php
+session_start();
+if(isset($_SESSION['logueado'])&& $_SESSION['logueado'] == TRUE){
+    header("Location: home.php");
+}
+?>
+<!--Estructure of login page-->
 <html lang="es">
     <head>
         <!--Latin characters-->

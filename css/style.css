@@ -144,9 +144,38 @@ body{
                 /*cursor: puntero*/
                 cursor: pointer;
                 /*tamaño de los bordes*/
-                border-radius: 3px;
-                
+                border-radius: 3px;   
             }
+            
+            .btn:focus{
+                background-color: #C4EOFB;
+            }
+        
+        /* CHECK IN */
+        .s-part{
+            /*alinición de texto*/
+            text-align: center;
+            /*Tipo de letra*/
+            font-family: 'Segoe UI', monospace;
+            /*anchura de la letra*/
+            font-weight: 400;
+            /* color */
+            color: #333;
+        }
+        
+        .s-part a{
+            /*decoración del texto*/
+            text-decoration: none;
+            /*efectos del raton*/
+            cursor: pointer;
+            /*color*/
+            color: #3897f0;
+            /*tipo de letra*/
+            font-family: 'Segoe UI', monospace;
+            /*anchura de la letra*/
+            font-weight: 400;
+        }
+        
         
 
 
