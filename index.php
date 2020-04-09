@@ -3,6 +3,7 @@
 <!--Login Home page-->
 <?php
 session_start();
+//Revisa que la sesion esta logeada , impidiendote que salgas mediante la modificación de la url.
 if(isset($_SESSION['logueado'])&& $_SESSION['logueado'] == TRUE){
     header("Location: home.php");
 }
@@ -26,9 +27,50 @@ if(isset($_SESSION['logueado'])&& $_SESSION['logueado'] == TRUE){
             <div class="w-left"><img src="images/celulares.png"></div>
             <!--Right-->
             <div class="w-right">
+                <!--Text of errordate-->
                 <?php
-                    // put your code here
+                    // Revisa que el elemento 'error' no sea nulo, de lo contrario no entrara.
+                    if(isset($_GET['error'])){
+                        echo "<center>Error el usuario o contraseña no coinciden</center>";
+                    }
                 ?> 
+                <!--Coding of login-->
+                <?php
+                    // Revisa que el elemento 'entrar' no sea nulo, de lo contrario no entrara.
+                    if(isset($_POST['entrar'])){
+                        require("conexion.php");
+                        //DEFINIMOS LAS VARIABLES QUE USAREMOS.
+                        // real_escape_string() => escapa los caracteres especiales.
+                        $username = $mysqli->real_escape_string($_POST['usuario']);
+                        // md5 => para la encriptación de la contraseña.
+                        $password = md5($_POST['password']);
+                        // la consulta que haremos a la base de datos.
+                        $consulta = "SELECT username,password FROM users WHERE username = '$username' AND password = '$password'";
+                        
+                        //CONEXION
+                        if($resultado = $mysqli->query($consulta)){
+                            while($row = $resultado->fetch_array()){
+                                $userok = $row['username'];
+                                $passok = $row['password'];
+                            }
+                            $resultado->close;
+                        }
+                        $mysqli->close();
+                        
+                        if(isset($username) && isset($password)){
+                            if($username == $userok && $password == $passok){
+                                
+                                session_start();
+                                $_SESSION['logueado'] = TRUE;
+                                header("Location: home.php");
+                            }
+                            
+                            else{
+                                Header("Location: index.php?error=login");
+                            }
+                        }
+                    }
+                ?>
                 <div class="main-content">
                     <!--Logo-->
                     <div class="header">
